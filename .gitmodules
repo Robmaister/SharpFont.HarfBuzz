@@ -1,0 +1,3 @@
+[submodule "Dependencies/SharpFont"]
+	path = Dependencies/SharpFont
+	url = https://github.com/Robmaister/SharpFont
