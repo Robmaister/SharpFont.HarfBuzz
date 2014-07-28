@@ -32,5 +32,10 @@ namespace SharpFont.HarfBuzz
 		{
 			return hb_version_check((uint)major, (uint)minor, (uint)micro);
 		}
+
+        public static void Shape(this Font font, Buffer buffer)
+        {
+            HB.hb_shape(font.Reference, buffer.Reference, IntPtr.Zero, 0);
+        }
 	}
 }
