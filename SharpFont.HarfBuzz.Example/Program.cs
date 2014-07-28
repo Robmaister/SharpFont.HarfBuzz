@@ -1,5 +1,6 @@
 ﻿using System;
 
+using SharpFont;
 using SharpFont.HarfBuzz;
 
 namespace SharpFont.HarfBuzz.Example
@@ -13,7 +14,15 @@ namespace SharpFont.HarfBuzz.Example
 			Console.WriteLine("Version: " + v.Major + "." + v.Minor + "." + v.Build);
 			Console.WriteLine("VersionCheck: " + HB.VersionCheck(v));
 
-			Console.ReadLine();
+            var lib = new Library();
+            var face = new SharpFont.Face(lib, @"C:\Windows\Fonts\tahoma.ttf");
+
+            var font = HarfBuzz.Font.FromFTFace(face);
+            var buf = new HarfBuzz.Buffer();
+            buf.Direction = Direction.HB_DIRECTION_RTL;
+            buf.Script = 1098015074; // HB_SCRIPT_ARABIC
+            buf.AddText("متن");
+            font.Shape(buf);
 		}
 	}
 }

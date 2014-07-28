@@ -57,7 +57,7 @@ namespace SharpFont.HarfBuzz
 		internal static extern void hb_buffer_add_utf32();
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
-		internal static extern void hb_buffer_add_utf8();
+		internal static extern void hb_buffer_add_utf8(IntPtr buffer, byte[] text, int text_length, int item_offset, int item_length);
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
 		internal static extern void hb_buffer_allocation_successful();
@@ -66,7 +66,7 @@ namespace SharpFont.HarfBuzz
 		internal static extern void hb_buffer_clear_contents();
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
-		internal static extern void hb_buffer_create();
+		internal static extern IntPtr hb_buffer_create();
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
 		internal static extern void hb_buffer_deserialize_glyphs();
@@ -96,7 +96,7 @@ namespace SharpFont.HarfBuzz
 		internal static extern void hb_buffer_get_language();
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
-		internal static extern void hb_buffer_get_length();
+		internal static extern int hb_buffer_get_length(IntPtr buf);
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
 		internal static extern void hb_buffer_get_script();
@@ -147,7 +147,7 @@ namespace SharpFont.HarfBuzz
 		internal static extern void hb_buffer_set_content_type();
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
-		internal static extern void hb_buffer_set_direction();
+		internal static extern void hb_buffer_set_direction(IntPtr buffer, Direction direction);
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
 		internal static extern void hb_buffer_set_flags();
@@ -159,7 +159,7 @@ namespace SharpFont.HarfBuzz
 		internal static extern void hb_buffer_set_length();
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
-		internal static extern void hb_buffer_set_script();
+		internal static extern void hb_buffer_set_script(IntPtr ptr, int script);
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
 		internal static extern void hb_buffer_set_segment_properties();
@@ -408,7 +408,7 @@ namespace SharpFont.HarfBuzz
 		internal static extern void hb_ft_face_create_cached();
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
-		internal static extern void hb_ft_font_create();
+		internal static extern IntPtr hb_ft_font_create(IntPtr ft_face, IntPtr destroy);
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
 		internal static extern void hb_ft_font_get_face();
@@ -621,7 +621,7 @@ namespace SharpFont.HarfBuzz
 		internal static extern void hb_set_union();
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
-		internal static extern void hb_shape();
+		internal static extern void hb_shape(IntPtr font, IntPtr buffer, IntPtr features, int num_features);
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
 		internal static extern void hb_shape_full();
