@@ -22,7 +22,7 @@ namespace SharpFont.HarfBuzz.Example
 
 			var font = HarfBuzz.Font.FromFTFace(face);
 			var buf = new HarfBuzz.Buffer();
-			buf.Direction = Direction.HB_DIRECTION_RTL;
+			buf.Direction = Direction.RTL;
 			buf.Script = Script.Arabic;
 			buf.AddText("متن");
 			font.Shape(buf);
