@@ -1,5 +1,5 @@
 #SharpFont.HarfBuzz
-###Cross-platform HarfBuzz bindings for C#
+###Cross-platform HarfBuzz bindings for C&#35;
 
 ##Quick Start
 
