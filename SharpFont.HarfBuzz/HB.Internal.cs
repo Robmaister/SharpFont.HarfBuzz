@@ -87,10 +87,10 @@ namespace SharpFont.HarfBuzz
 		internal static extern void hb_buffer_get_flags();
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
-		internal static extern void hb_buffer_get_glyph_infos();
+		internal static extern IntPtr hb_buffer_get_glyph_infos(IntPtr buf, out int length);
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
-		internal static extern void hb_buffer_get_glyph_positions();
+		internal static extern IntPtr hb_buffer_get_glyph_positions(IntPtr buf, out int length);
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
 		internal static extern void hb_buffer_get_language();

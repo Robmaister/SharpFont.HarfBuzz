@@ -36,6 +36,11 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Buffer.cs" />
+    <Compile Include="Direction.cs" />
+    <Compile Include="Font.cs" />
+    <Compile Include="GlyphInfo.cs" />
+    <Compile Include="GlyphPosition.cs" />
     <Compile Include="HB.cs" />
     <Compile Include="HB.Internal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
