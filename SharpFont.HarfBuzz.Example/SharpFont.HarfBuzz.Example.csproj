@@ -36,6 +36,7 @@
       <HintPath>..\Dependencies\SharpFont\SharpFont\bin\Release\SharpFont.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
