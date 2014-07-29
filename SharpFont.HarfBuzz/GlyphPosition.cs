@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 namespace SharpFont.HarfBuzz
 {
 	[StructLayout(LayoutKind.Sequential)]
-	public class GlyphInfo
+	public class GlyphPosition
 	{
-		public uint codepoint;
-		public uint mask;
-		public uint cluster;
+		public int xAdvance;
+		public int yAdvance;
+		public int xOffset;
+		public int yOffset;
 	}
 }
