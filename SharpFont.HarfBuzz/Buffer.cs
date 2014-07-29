@@ -23,7 +23,7 @@ namespace SharpFont.HarfBuzz
 		#region Properties
 		public Direction Direction { set { HB.hb_buffer_set_direction(reference, value); } }
 		// Arabic
-		public int Script { set { HB.hb_buffer_set_script(reference, value); } }
+		public Script Script { set { HB.hb_buffer_set_script(reference, value); } }
 		public int Length { get { return HB.hb_buffer_get_length(reference); } }
 		internal IntPtr Reference { get { return reference; } }
 		#endregion

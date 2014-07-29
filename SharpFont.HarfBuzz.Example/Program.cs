@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Imaging;
-using System.IO;
-using System.Runtime.InteropServices;
-using System.Threading;
 
 using SharpFont;
 using SharpFont.HarfBuzz;
@@ -26,7 +23,7 @@ namespace SharpFont.HarfBuzz.Example
 			var font = HarfBuzz.Font.FromFTFace(face);
 			var buf = new HarfBuzz.Buffer();
 			buf.Direction = Direction.HB_DIRECTION_RTL;
-			buf.Script = 1098015074; // HB_SCRIPT_ARABIC
+			buf.Script = Script.Arabic;
 			buf.AddText("متن");
 			font.Shape(buf);
 
