@@ -16,7 +16,7 @@ SharpFont.HarfBuzz is not yet listed on NuGet. Stay tuned!
 SharpFont.HarfBuzz is licensed under the [MIT License](https://github.com/Robmaister/SharpFont.HarfBuzz/blob/master/LICENSE).
 
 ```
-Copyright (c) 2014 Robert Rouhani <robert.rouhani@gmail.com> and other contributors (see [CONTRIBUTORS](https://github.com/Robmaister/SharpFont.HarfBuzz/blob/master/CONTRIBUTORS) file).
+Copyright (c) 2014 Robert Rouhani <robert.rouhani@gmail.com> and other contributors (see CONTRIBUTORS file).
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
