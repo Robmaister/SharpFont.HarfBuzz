@@ -8,10 +8,10 @@ namespace SharpFont.HarfBuzz
 {
 	public enum Direction
 	{
-		HB_DIRECTION_INVALID = 0,
-		HB_DIRECTION_LTR = 4,
-		HB_DIRECTION_RTL,
-		HB_DIRECTION_TTB,
-		HB_DIRECTION_BTT
+		Invalid = 0,
+		LTR = 4,
+		RTL,
+		TTB,
+		BTT
 	}
 }

@@ -50,6 +50,7 @@
     <Compile Include="HB.cs" />
     <Compile Include="HB.Internal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Script.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SharpFont.HarfBuzz.snk" />

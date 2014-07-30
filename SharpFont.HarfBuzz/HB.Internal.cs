@@ -159,7 +159,7 @@ namespace SharpFont.HarfBuzz
 		internal static extern void hb_buffer_set_length();
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
-		internal static extern void hb_buffer_set_script(IntPtr ptr, int script);
+		internal static extern void hb_buffer_set_script(IntPtr ptr, Script script);
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
 		internal static extern void hb_buffer_set_segment_properties();
