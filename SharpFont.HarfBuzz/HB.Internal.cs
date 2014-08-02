@@ -16,6 +16,105 @@ namespace SharpFont.HarfBuzz
 
 		private const CallingConvention CallConvention = CallingConvention.Cdecl;
 
+		#region hb-blob
+
+		#endregion
+
+		#region hb-buffer
+
+		#endregion
+
+		#region hb-common
+
+		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
+		internal static extern Direction hb_direction_from_string(string str, int len);
+
+		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
+		internal static extern string hb_direction_to_string(Direction dir);
+
+		#endregion
+
+		#region hb-coretext
+
+		#endregion
+
+		#region hb-face
+
+		#endregion
+
+		#region hb-font
+
+		#endregion
+
+		#region hb-ft
+
+		//TODO get proper delegate type for "destroy" parameters
+		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
+		internal static extern IntPtr hb_ft_face_create(IntPtr ft_face, IntPtr destroy);
+
+		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
+		internal static extern IntPtr hb_ft_face_create_cached(IntPtr ft_face);
+
+		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
+		internal static extern IntPtr hb_ft_font_create(IntPtr ft_face, IntPtr destroy);
+
+		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
+		internal static extern void hb_ft_font_set_funcs(IntPtr font);
+
+		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
+		internal static extern IntPtr hb_ft_font_get_face(IntPtr font);
+
+		#endregion
+
+		#region hb-glib
+
+		#endregion
+
+		#region hb-gobject
+
+		#endregion
+
+		#region hb-graphite2
+
+		#endregion
+
+		#region hb-icu
+
+		#endregion
+
+		#region hb-ot
+
+		#endregion
+
+		#region hb-set
+
+		#endregion
+
+		#region hb-shape
+
+		#endregion
+
+		#region hb-unicode
+
+		#endregion
+
+		#region hb-uniscribe
+
+		#endregion
+
+		#region hb-version
+
+		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
+		internal static extern void hb_version(out uint major, out uint minor, out uint micro);
+
+		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
+		internal static extern bool hb_version_check(uint major, uint minor, uint micro);
+
+		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
+		internal static extern IntPtr hb_version_string();
+
+		#endregion
+
 		#region Unfinished Entry Points
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
@@ -176,12 +275,6 @@ namespace SharpFont.HarfBuzz
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
 		internal static extern void hb_buffer_set_user_data();
-
-		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
-		internal static extern void hb_direction_from_string();
-
-		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
-		internal static extern void hb_direction_to_string();
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
 		internal static extern void hb_face_create();
@@ -407,21 +500,6 @@ namespace SharpFont.HarfBuzz
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
 		internal static extern void hb_font_subtract_glyph_origin_for_direction();
-
-		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
-		internal static extern void hb_ft_face_create();
-
-		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
-		internal static extern void hb_ft_face_create_cached();
-
-		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
-		internal static extern IntPtr hb_ft_font_create(IntPtr ft_face, IntPtr destroy);
-
-		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
-		internal static extern void hb_ft_font_get_face();
-
-		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
-		internal static extern void hb_ft_font_set_funcs();
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
 		internal static extern void hb_glib_get_unicode_funcs();
@@ -754,14 +832,5 @@ namespace SharpFont.HarfBuzz
 		internal static extern void hb_uniscribe_font_get_logfontw();
 
 		#endregion
-
-		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
-		internal static extern void hb_version(out uint major, out uint minor, out uint micro);
-
-		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
-		internal static extern bool hb_version_check(uint major, uint minor, uint micro);
-
-		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
-		internal static extern IntPtr hb_version_string();
 	}
 }
