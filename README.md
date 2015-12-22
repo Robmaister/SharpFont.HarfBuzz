@@ -9,7 +9,7 @@ SharpFont.HarfBuzz is not yet listed on NuGet. Stay tuned!
 ###From Source
 1. Clone the repository to your computer.
   - If pulling, **make sure you update submodules** `git submodule update --init --recursive`
-2. Compile the SharpFont submodule in Release mode. The submodule is located in the [Dependencies](https://github.com/Robmaister/SharpFont.HarfBuzz/tree/master/Dependencies) folder.
+2. Compile SharpFont.HarfBuzz.sln, located in the Source directory.
 
 ##License
 

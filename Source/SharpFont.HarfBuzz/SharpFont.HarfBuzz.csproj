@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\Binaries\SharpFont.HarfBuzz\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -24,7 +24,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\Binaries\SharpFont.HarfBuzz\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -36,10 +36,10 @@
     <AssemblyOriginatorKeyFile>SharpFont.HarfBuzz.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SharpFont">
-      <HintPath>..\Dependencies\SharpFont\SharpFont\bin\Release\SharpFont.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
+    <Reference Include="SharpFont">
+      <HintPath>..\..\Dependencies\SharpFont\Binaries\SharpFont\Release\SharpFont.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Buffer.cs" />
@@ -56,11 +56,10 @@
     <None Include="SharpFont.HarfBuzz.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
+  <Target Name="BeforeBuild" BeforeTargets="PrepareForBuild">
+    <ItemGroup>
+      <Projects Include="..\..\Dependencies\SharpFont\Source\SharpFont\SharpFont.csproj" />
+    </ItemGroup>
+    <MSBuild Projects="@(Projects)" Properties="Configuration=Release;Platform=AnyCPU" />
   </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

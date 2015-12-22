@@ -25,7 +25,7 @@ namespace SharpFont.HarfBuzz.Example
 
 			var lib = new Library();
 			var face = new SharpFont.Face(lib, @"C:\Windows\Fonts\tahoma.ttf");
-			face.SetCharSize(0, 50 << 6, 72, 72);
+			face.SetCharSize(0, 50, 72, 72);
 
 			var font = HarfBuzz.Font.FromFTFace(face);
 			var buf = new HarfBuzz.Buffer();
