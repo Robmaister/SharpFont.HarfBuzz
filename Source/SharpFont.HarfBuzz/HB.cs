@@ -26,14 +26,14 @@ namespace SharpFont.HarfBuzz
 			}
 		}
 
-		public static bool VersionCheck(Version version)
+		public static bool VersionAtLeast(Version version)
 		{
-			return VersionCheck(version.Major, version.Minor, version.Build);
+			return VersionAtLeast(version.Major, version.Minor, version.Build);
 		}
 
-		public static bool VersionCheck(int major, int minor, int micro)
+		public static bool VersionAtLeast(int major, int minor, int micro)
 		{
-			return hb_version_check((uint)major, (uint)minor, (uint)micro);
+			return hb_version_atleast((uint)major, (uint)minor, (uint)micro);
 		}
 
 		public static void Shape(this Font font, Buffer buffer)

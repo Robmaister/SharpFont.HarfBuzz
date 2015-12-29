@@ -17,7 +17,7 @@ namespace SharpFont.HarfBuzz.Example
 			Console.WriteLine("Version string: " + HB.VersionString);
 			Version v = HB.Version;
 			Console.WriteLine("Version: " + v.Major + "." + v.Minor + "." + v.Build);
-			Console.WriteLine("VersionCheck: " + HB.VersionCheck(v));
+			Console.WriteLine("VersionCheck: " + HB.VersionAtLeast(v));
 
 			var lib = new Library();
 			var face = new SharpFont.Face(lib, @"C:\Windows\Fonts\tahoma.ttf");

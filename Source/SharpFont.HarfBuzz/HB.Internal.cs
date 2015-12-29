@@ -104,7 +104,7 @@ namespace SharpFont.HarfBuzz
 		internal static extern void hb_version(out uint major, out uint minor, out uint micro);
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
-		internal static extern bool hb_version_check(uint major, uint minor, uint micro);
+		internal static extern bool hb_version_atleast(uint major, uint minor, uint micro);
 
 		[DllImport(HarfBuzzDll, CallingConvention = CallConvention)]
 		internal static extern IntPtr hb_version_string();
