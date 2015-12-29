@@ -53,6 +53,9 @@
     <Compile Include="Script.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SharpFont.HarfBuzz.dll.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="SharpFont.HarfBuzz.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
