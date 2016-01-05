@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>SharpFont.HarfBuzz</id>
+    <version>0.1.1</version>
+    <title>SharpFont.HarfBuzz</title>
+    <authors>Robert Rouhani</authors>
+    <owners>Robert Rouhani</owners>
+    <licenseUrl>https://github.com/Robmaister/SharpFont.HarfBuzz/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Robmaister/SharpFont.HarfBuzz</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Cross-platform HarfBuzz bindings for C#.</description>
+    <releaseNotes>
+      - Initial release with incomplete API and stock DLLs
+      - Theoretical Linux support and no OS X support as of yet.
+      - Fixed incorrect package title.
+    </releaseNotes>
+    <copyright>Copyright (c) 2012-2016 Robert Rouhani</copyright>
+    <tags>harfbuzz freetype font bindings wrapper text layout unicode</tags>
+    <dependencies>
+        <dependency id="SharpFont" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\..\Binaries\SharpFont.HarfBuzz.Example\Release\libharfbuzz-0.dll" target="bin" />
+    <file src="..\..\Binaries\SharpFont.HarfBuzz.Example\Release\libglib-2.0-0.dll" target="bin" />
+    <file src="..\..\Binaries\SharpFont.HarfBuzz.Example\Release\libiconv-2.dll" target="bin" />
+    <file src="..\..\Binaries\SharpFont.HarfBuzz.Example\Release\libintl-8.dll" target="bin" />
+    <file src="SharpFont.HarfBuzz.props" target="build" />
+    <file src="..\..\Binaries\SharpFont.HarfBuzz\Release\SharpFont.HarfBuzz.dll.config" target="config" />
+    <file src="..\..\Binaries\SharpFont.HarfBuzz\Release\SharpFont.HarfBuzz.dll" target="lib\net20" />
+  </files>
+</package>
