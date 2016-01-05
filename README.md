@@ -4,7 +4,12 @@
 ##Quick Start
 
 ###NuGet
-SharpFont.HarfBuzz is not yet listed on NuGet. Stay tuned!
+SharpFont.HarfBuzz is available on [NuGet][1]. It can be installed by issuing
+the following command in the package manager console:
+
+```
+PM> Install-Package SharpFont.HarfBuzz
+```
 
 ###From Source
 1. Clone the repository to your computer.
@@ -13,10 +18,10 @@ SharpFont.HarfBuzz is not yet listed on NuGet. Stay tuned!
 
 ##License
 
-SharpFont.HarfBuzz is licensed under the [MIT License](https://github.com/Robmaister/SharpFont.HarfBuzz/blob/master/LICENSE).
+SharpFont.HarfBuzz is licensed under the [MIT License][2].
 
 ```
-Copyright (c) 2014-2015 Robert Rouhani <robert.rouhani@gmail.com> and other contributors (see CONTRIBUTORS file).
+Copyright (c) 2014-2016 Robert Rouhani <robert.rouhani@gmail.com> and other contributors (see CONTRIBUTORS file).
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -36,3 +41,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+[1]: https://nuget.org/packages/SharpFont.HarfBuzz/
+[2]: https://github.com/Robmaister/SharpFont.HarfBuzz/blob/master/LICENSE
