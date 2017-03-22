@@ -37,9 +37,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="SharpFont">
-      <HintPath>..\..\Dependencies\SharpFont\Binaries\SharpFont\Release\SharpFont.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Buffer.cs" />
@@ -58,11 +55,11 @@
     </Content>
     <None Include="SharpFont.HarfBuzz.snk" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Dependencies\SharpFont\Source\SharpFont\SharpFont.csproj">
+      <Project>{ECD55E3B-1139-4F0D-AF63-3F471AAF6E91}</Project>
+      <Name>SharpFont</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="BeforeBuild" BeforeTargets="PrepareForBuild">
-    <ItemGroup>
-      <Projects Include="..\..\Dependencies\SharpFont\Source\SharpFont\SharpFont.csproj" />
-    </ItemGroup>
-    <MSBuild Projects="@(Projects)" Properties="Configuration=Release;Platform=AnyCPU" />
-  </Target>
 </Project>

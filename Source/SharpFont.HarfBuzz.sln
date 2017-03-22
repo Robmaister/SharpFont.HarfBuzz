@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpFont.HarfBuzz", "SharpFont.HarfBuzz\SharpFont.HarfBuzz.csproj", "{31457A69-1EF3-4CDC-8741-6DE3DDB82D3B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpFont.HarfBuzz.Example", "SharpFont.HarfBuzz.Example\SharpFont.HarfBuzz.Example.csproj", "{1D488727-E222-43A2-BBBD-095F17A488C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpFont", "..\Dependencies\SharpFont\Source\SharpFont\SharpFont.csproj", "{ECD55E3B-1139-4F0D-AF63-3F471AAF6E91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +23,10 @@ Global
 		{1D488727-E222-43A2-BBBD-095F17A488C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D488727-E222-43A2-BBBD-095F17A488C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D488727-E222-43A2-BBBD-095F17A488C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECD55E3B-1139-4F0D-AF63-3F471AAF6E91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECD55E3B-1139-4F0D-AF63-3F471AAF6E91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECD55E3B-1139-4F0D-AF63-3F471AAF6E91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECD55E3B-1139-4F0D-AF63-3F471AAF6E91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
