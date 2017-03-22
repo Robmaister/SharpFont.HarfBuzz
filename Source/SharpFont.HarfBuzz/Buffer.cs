@@ -41,8 +41,17 @@ namespace SharpFont.HarfBuzz
 			var glyphInfos = new GlyphInfo[length];
 			for (int i = 0; i < length; ++i)
 			{
-				glyphInfos[i] = new GlyphInfo();
-				Marshal.PtrToStructure(glyphInfoPtr + 20 * i, glyphInfos[i]);
+#if FIX			
+				// Portable class library Profile 111 does not support 
+				// the generic version of Marshal.PtrToStructure
+				glyphInfos[i] = Marshal.PtrToStructure<GlyphInfo>(
+					glyphInfoPtr + 20 * i);
+#else
+				// This version causes boxing.
+				glyphInfos[i] = (GlyphInfo)Marshal.PtrToStructure(
+					glyphInfoPtr + 20 * i, typeof(GlyphInfo));
+
+#endif
 			}
 
 			return glyphInfos;
@@ -54,12 +63,20 @@ namespace SharpFont.HarfBuzz
 			var glyphPositions = new GlyphPosition[length];
 			for (int i = 0; i < length; ++i)
 			{
-				glyphPositions[i] = new GlyphPosition();
-				Marshal.PtrToStructure(glyphPositionPtr + 20 * i, glyphPositions[i]);
+#if FIX			
+				// Portable class library Profile 111 does not support 
+				// the generic version of Marshal.PtrToStructure
+				glyphPositions[i] = Marshal.PtrToStructure<GlyphPosition>(
+					glyphPositionPtr + 20 * i);
+#else
+				// This version causes boxing.
+				glyphPositions[i] = (GlyphPosition) Marshal.PtrToStructure(
+					glyphPositionPtr + 20 * i, typeof(GlyphPosition));
+#endif
 			}
 
 			return glyphPositions;
 		}
-		#endregion
+#endregion
 	}
 }

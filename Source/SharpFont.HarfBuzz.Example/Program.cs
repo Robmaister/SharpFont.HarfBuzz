@@ -7,6 +7,7 @@ using System.Drawing.Imaging;
 
 using SharpFont;
 using SharpFont.HarfBuzz;
+using Examples;
 
 namespace SharpFont.HarfBuzz.Example
 {

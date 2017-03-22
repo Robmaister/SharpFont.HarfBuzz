@@ -9,8 +9,11 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SharpFont.HarfBuzz</RootNamespace>
     <AssemblyName>SharpFont.HarfBuzz</AssemblyName>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,12 +39,6 @@
     <AssemblyOriginatorKeyFile>SharpFont.HarfBuzz.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="SharpFont">
-      <HintPath>..\..\Dependencies\SharpFont\Binaries\SharpFont\Release\SharpFont.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Buffer.cs" />
     <Compile Include="Direction.cs" />
     <Compile Include="Font.cs" />
@@ -58,11 +55,11 @@
     </Content>
     <None Include="SharpFont.HarfBuzz.snk" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="BeforeBuild" BeforeTargets="PrepareForBuild">
-    <ItemGroup>
-      <Projects Include="..\..\Dependencies\SharpFont\Source\SharpFont\SharpFont.csproj" />
-    </ItemGroup>
-    <MSBuild Projects="@(Projects)" Properties="Configuration=Release;Platform=AnyCPU" />
-  </Target>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Dependencies\SharpFont\Source\SharpFont\SharpFont.csproj">
+      <Project>{ECD55E3B-1139-4F0D-AF63-3F471AAF6E91}</Project>
+      <Name>SharpFont</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>
