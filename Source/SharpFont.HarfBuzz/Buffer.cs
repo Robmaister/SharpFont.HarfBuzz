@@ -41,8 +41,7 @@ namespace SharpFont.HarfBuzz
 			var glyphInfos = new GlyphInfo[length];
 			for (int i = 0; i < length; ++i)
 			{
-				glyphInfos[i] = new GlyphInfo();
-				Marshal.PtrToStructure(glyphInfoPtr + 20 * i, glyphInfos[i]);
+				glyphInfos[i] = Marshal.PtrToStructure<GlyphInfo>(glyphInfoPtr + 20 * i);
 			}
 
 			return glyphInfos;
@@ -54,8 +53,7 @@ namespace SharpFont.HarfBuzz
 			var glyphPositions = new GlyphPosition[length];
 			for (int i = 0; i < length; ++i)
 			{
-				glyphPositions[i] = new GlyphPosition();
-				Marshal.PtrToStructure(glyphPositionPtr + 20 * i, glyphPositions[i]);
+				glyphPositions[i] = Marshal.PtrToStructure<GlyphPosition>(glyphPositionPtr + 20 * i);
 			}
 
 			return glyphPositions;

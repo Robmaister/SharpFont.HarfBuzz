@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 namespace SharpFont.HarfBuzz
 {
 	[StructLayout(LayoutKind.Sequential)]
-	public class GlyphPosition
+	public struct GlyphPosition
 	{
 		public int xAdvance;
 		public int yAdvance;

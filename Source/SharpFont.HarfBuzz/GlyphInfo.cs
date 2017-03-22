@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 namespace SharpFont.HarfBuzz
 {
 	[StructLayout(LayoutKind.Sequential)]
-	public class GlyphInfo
+	public struct GlyphInfo
 	{
 		public uint codepoint;
 		public uint mask;
