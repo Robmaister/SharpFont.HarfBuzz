@@ -1,9 +1,9 @@
-#SharpFont.HarfBuzz
-###Cross-platform HarfBuzz bindings for C&#35;
+# SharpFont.HarfBuzz
+### Cross-platform HarfBuzz bindings for C&#35;
 
-##Quick Start
+## Quick Start
 
-###NuGet
+### NuGet
 SharpFont.HarfBuzz is available on [NuGet][1]. It can be installed by issuing
 the following command in the package manager console:
 
@@ -11,12 +11,12 @@ the following command in the package manager console:
 PM> Install-Package SharpFont.HarfBuzz
 ```
 
-###From Source
+### From Source
 1. Clone the repository to your computer.
   - If pulling, **make sure you update submodules** `git submodule update --init --recursive`
 2. Compile SharpFont.HarfBuzz.sln, located in the Source directory.
 
-##License
+## License
 
 SharpFont.HarfBuzz is licensed under the [MIT License][2].
 
